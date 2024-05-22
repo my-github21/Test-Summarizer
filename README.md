@@ -31,3 +31,5 @@ CREATE TABLE tblStudent (
 );
 
 ```
+## Usage
+Run the main.py file to start the Student Grade Management System
