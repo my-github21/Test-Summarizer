@@ -17,10 +17,9 @@ The Student Grade Management System is a Python-based program that allows users 
 ## Setup
 
 ### Install the required Python packages:
-```bash
+```bash 
 pip install mysql-connector-python
-
----exit
+```exit
 
 ## Set up a MySQL database named pythonprojectsdb with the necessary table. You can use the following SQL query to create the table
 ```bash
