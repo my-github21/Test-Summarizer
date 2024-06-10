@@ -1,15 +1,15 @@
-###  Text Summarizer
+#  Text Summarizer
 
 ## Overview
 The Text Summarizer is a Django-based web application designed to upload PDF files, extract and summarize the text content, and translate the summarized text into multiple languages. The application also extracts keywords from the summaries to provide a concise overview of the text.
 
 ## Features
-- # Upload PDF: Upload a PDF file to the system.
-- # Extract Text: Extract text from the uploaded PDF.
-- # Summarize Text: Summarize the extracted text using the LSA summarizer.
-- # Translate Summary: Translate the summary into English and Marathi.
-- # Extract Keywords: Generate keywords from the translated summaries.
-- # Display Results: Show the summarized text and keywords in both English and Marathi.
+-  Upload PDF: Upload a PDF file to the system.
+-  Extract Text: Extract text from the uploaded PDF.
+-  Summarize Text: Summarize the extracted text using the LSA summarizer.
+-  Translate Summary: Translate the summary into English and Marathi.
+-  Extract Keywords: Generate keywords from the translated summaries.
+-  Display Results: Show the summarized text and keywords in both English and Marathi.
 
 ## Requirements
 - Python 3.x
@@ -21,11 +21,11 @@ The Text Summarizer is a Django-based web application designed to upload PDF fil
 
 ## Setup
 
-# Install the required Python packages:
+### Install the required Python packages:
 ```
 pip install django pypdf2 sumy googletrans==4.0.0-rc1 yake
 ```
-# Set up the Django project and application:
+### Set up the Django project and application:
 1. Create a new Django project and application:
 ```
 django-admin startproject TextSummarizer
@@ -36,7 +36,7 @@ python manage.py startapp myfile
  2. Add myfile to the INSTALLED_APPS list in TextSummarizer/settings.py.
 
 ## Create the Django model for file uploads 
-# In myfile/models.py:
+### In myfile/models.py:
 ```
 from django.db import models
 
@@ -45,7 +45,7 @@ class UploadedFile(models.Model):
     uploaded_at = models.DateTimeField(auto_now_add=True)
 ```
 ## Create the form for file uploads:
-# In myfile/forms.py:
+### In myfile/forms.py:
 ```
 from django import forms
 from .models import UploadedFile
@@ -56,7 +56,7 @@ class UploadsForms(forms.ModelForm):
         fields = ['file']
 ```
 ## Create the view for handling uploads and processing:
-# In myfile/views.py:
+### In myfile/views.py:
 ```
 from django.shortcuts import render
 from .forms import UploadsForms
@@ -125,7 +125,7 @@ def translate_summary_marathi(extracted_summary):
 
 ```
 ## Create the templates for upload and display:
-# upload.html:
+### upload.html:
 ```
 <!DOCTYPE html>
 <html>
@@ -146,7 +146,7 @@ def translate_summary_marathi(extracted_summary):
 </html>
 
 ```
-# display.html:
+### display.html:
 ```
 <!DOCTYPE html>
 <html>
